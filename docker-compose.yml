@@ -3,5 +3,7 @@ services:
   chall:
     restart: always
     build: .
+    env_file:
+        - .env
     ports:
         - "5006:10000"
