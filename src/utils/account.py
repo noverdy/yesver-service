@@ -9,10 +9,10 @@ class Account:
         self.token = token
 
     def read_flag(self) -> str:
-        # if self.is_admin:
-        return environ.get('FLAG')
-        # else:
-        #     return 'You are not admin!'
+        if self.is_admin:
+            return environ.get('FLAG')
+        else:
+            return 'You are not admin!'
 
 
 class AccountService:
